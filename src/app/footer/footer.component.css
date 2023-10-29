@@ -1,0 +1,83 @@
+/* Style the fixed footer */
+footer {
+    background-color: #006600;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    /* left: 0; */
+    width: 100%;
+    padding: 0;
+    height: 100px;
+}
+
+/* Center the content within the container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+
+/* Style the footer logo */
+.footer-logo img {
+    max-width: 100px;
+}
+
+/* Style the footer navigation links */
+.footer-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Style the footer social media icons */
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social li {
+    margin-right: 10px;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* Style the copyright and legal info */
+.footer-info {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.footer-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+

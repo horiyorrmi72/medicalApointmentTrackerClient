@@ -1,33 +1,52 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent {
-  signupdata: FormGroup = new FormGroup({});
+export class SignupComponent implements OnInit {
+  signupdata!: FormGroup ;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private authservice: AuthService, private router: Router) { }
+
   ngOnInit(): void {
-    this.signupdata = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
-      email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")] ]
-
-    });
-
+    this.initForm();
   }
+
+  initForm() {
+    this.signupdata = this.fb.group({
+      username: ['', [Validators.required, Validators.minLength(4)]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      confirmPassword: ['', [Validators.required, Validators.minLength(8)]],
+      email: ['', [Validators.required, Validators.email]]
+    });
+  }
+
   onSignUp() {
     if (this.signupdata.valid) {
       const username = this.signupdata.value.username;
       const password = this.signupdata.value.password;
+      const confirmPassword = this.signupdata.value.confirmPassword;
       const email = this.signupdata.value.email;
 
-      console.log(username, password, email)
+      if (confirmPassword !== password) {
+        alert("Passwords do not match");
+        return;
+      }
 
+      this.authservice.signup(email, password, username, confirmPassword).subscribe(
+        (data) => {
+          console.log('Signup successful:', data);
+          this.router.navigate(['/register']);
+        },
+        (error) => {
+          console.error('Signup failed:', error);
+        }
+      );
     }
   }
-
-
 }

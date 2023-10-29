@@ -12,9 +12,9 @@ label {
     font-weight: bold;
 }
 
-/* Style input and textarea elements */
+/* Style input elements */
 input[type="text"],
-textarea {
+input[type="number"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -22,7 +22,12 @@ textarea {
     border-radius: 5px;
 }
 
-/* Style "Add" buttons */
+/* Style the blood pressure input separately */
+input#bloodPressure {
+    text-transform: uppercase; /* Convert to uppercase */
+}
+
+/* Style the submit button */
 button {
     background-color: rgba(40, 167, 69, 0.5);
     color: white;
@@ -35,19 +40,4 @@ button {
 /* Change button color on hover */
 button:hover {
     background-color: #0056b3;
-}
-
-/* Style the "Add" buttons inside the form */
-.form-group button {
-    margin-left: 10px;
-}
-
-/* Style the "Add" buttons with a different background color */
-.form-group button.add-button {
-    background-color: #28a745;
-}
-
-/* Change button color on hover */
-.form-group button.add-button:hover {
-    background-color: #1f7e31;
 }

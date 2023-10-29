@@ -1,0 +1,19 @@
+.canvass-container .btn{
+    background-color: rgba(40, 167, 69, 0.5);
+    position: absolute;
+    left: 0;
+    top: 90px;
+}
+.offcanvas{
+    background-color:#006600 ;
+ 
+}
+.offcanvas-body,
+.offcanvas-header,
+.offcanvas-body li a{
+    color: #ffffff ;
+}
+.opt-out{
+    position: absolute;
+    bottom: 0;
+}

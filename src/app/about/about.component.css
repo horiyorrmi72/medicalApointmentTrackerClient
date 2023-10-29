@@ -1,0 +1,21 @@
+p{
+    justify-content: center;
+    align-items: center;
+}
+.btn-dark {
+    /* Set the background color */
+    background-color: #343a40;
+    /* Set the text color */
+    color: #fff;
+    /* Add padding to the button */
+    padding: 10px 20px;
+    /* Remove the button border */
+    border: none;
+    /* Add a pointer cursor on hover */
+    cursor: pointer;
+    /* Make the button a block element */
+    display: block;
+    /* Center-align the button */
+    margin: 20px auto;
+    text-transform: capitalize;
+}

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,8 +22,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import { LoginComponent } from './login/login.component';
+import { VitalsComponent } from './vitals/vitals.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 
 
@@ -39,7 +44,10 @@ import { LoginComponent } from './login/login.component';
     NavComponent,
     LandingpageComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    VitalsComponent,
+    ContactComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -52,7 +60,8 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
     
   ],
   providers: [],

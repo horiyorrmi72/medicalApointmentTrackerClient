@@ -1,0 +1,53 @@
+/* Apply some basic styles to the main container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+/* Style the banner container */
+.banner1 {
+    /* background-color:; */
+    /* color: #fff; */
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.banner1 h1 {
+    font-size: 24px;
+}
+
+.banner1 span {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Style the buttons container */
+.container:not(.banner1) {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.container:not(.banner1) button {
+    text-transform: uppercase;
+    background-color: #006600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container:not(.banner1) button:hover {
+    background-color: #005aa0;
+}

@@ -1,0 +1,83 @@
+/* Style the container */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+/* Style the heading */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style the small text */
+small {
+    color: #888;
+}
+
+/* Style the form container */
+.form-container {
+    margin-top: 20px;
+}
+
+/* Style form input fields and selects */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style select options */
+select option {
+    color: #333;
+}
+
+/* Style the date inputs */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style the gender select */
+select[name="gender_type"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style the buttons */
+button.btn-ordinary {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.btn-ordinary:hover {
+    background-color: #555;
+}
+
+/* Additional styling for the form elements */
+div {
+    margin-bottom: 10px;
+}
+
+/* Add any additional styling for other elements as needed */

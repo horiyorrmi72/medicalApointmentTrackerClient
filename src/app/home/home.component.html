@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="canvass-container">
+    <div class="canvass-container container">
         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop"
             aria-controls="staticBackdrop">
             <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="menu"></mat-icon>
@@ -14,9 +14,9 @@
             <div class="offcanvas-body">
                 <div>
                     <ul class="linkList">
-                        <li class="listItems"><a href="">Check & Record Vitals</a></li>
-                        <li class="listItems"><a href="">Appointment Confirmation</a></li>
-                        <li class="listItems"><a href="">Prescription</a></li>
+                        <li class="listItems" routerLink="/vitals" ariaCurrentWhenActive="page"><a href="">Check & Record Vitals</a></li>
+                        <li class="listItems" routerLink="/confirmation" ariaCurrentWhenActive="page"><a href="">Appointment Confirmation</a></li>
+                        <li class="listItems" routerLink="/prescription" ariaCurrentWhenActive="page"><a href="">Prescription</a></li>
                     </ul>
                     <div class="opt-out">
                         <ul>
