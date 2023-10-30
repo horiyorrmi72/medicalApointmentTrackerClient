@@ -19,14 +19,13 @@ export class BookingComponent {
       designation_type: ['student', Validators.required],
       rfa: ['', Validators.required],
       past_ailment: ['', Validators.required],
-      current_diagnosis: ['',Validators.required], 
+      current_diagnosis: ['', Validators.required],
       doa: ['', Validators.required],
     });
   }
 
   onSubmit() {
     if (this.appointmentForm.valid) {
-      // Handle form submission here
       console.log(this.appointmentForm.value);
     }
   }

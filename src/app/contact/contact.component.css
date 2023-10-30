@@ -1,0 +1,60 @@
+  .container{
+    max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  }
+
+  h1 {
+      text-align: center;
+      color: #333;
+  }
+
+  .contact-card {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-card h2,
+  .contact-card h3 {
+      margin: 10px 0;
+      color: #333;
+  }
+
+  .contact-card p {
+      margin: 5px 0;
+  }
+
+  .social-media {
+      list-style: none;
+      padding: 0;
+  }
+
+  .social-media li {
+      display: inline;
+      margin-right: 10px;
+  }
+
+  .social-media a {
+      text-decoration: none;
+      color: #333;
+  }
+
+  .return-button {
+      display: block;
+      width: 100px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #4CAF50;
+      /* Green background */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      /* Smooth transition */
+  }

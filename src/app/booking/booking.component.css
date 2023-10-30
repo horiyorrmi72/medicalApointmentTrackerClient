@@ -1,0 +1,42 @@
+.container {
+    width: 400px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    height: auto;
+}
+
+.container p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.container input,
+.container select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container input[type="date"] {
+    width: auto;
+}
+
+.container input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #0056b3;
+}

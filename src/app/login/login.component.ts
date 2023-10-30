@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,15 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  formdata: FormGroup;
 
-  formdata: FormGroup = new FormGroup({});
-
-  constructor(private fb: FormBuilder) { }
-
-  ngOnInit(): void {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.formdata = this.fb.group({
-      email: ['', [Validators.required, Validators.minLength(4)]], 
-      password: ['', [Validators.required, Validators.email]] 
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]
+      ]
     });
   }
 
@@ -25,9 +24,23 @@ export class LoginComponent {
       const email = this.formdata.value.email;
       const password = this.formdata.value.password;
 
-      console.log('Email:', email);
-      console.log('Password:', password);
+      this.authService.login(email, password).subscribe(
+        (data) => {
+              this.router.navigate(['/register']);
+          // this.authService.designedStatus().subscribe((status) => {
+          //   if (status === 'Staff') {
+          //     this.router.navigate(['/register']);
+          //   } else {
+          //     this.router.navigate(['/home']);
+          //   }
+          //   console.log(data);
+          // });
+        },
+        (error) => {
+          console.error('Login failed:', error);
+          this.router.navigate(['/login']);
+        }
+      );
     }
   }
-
 }

@@ -1,128 +1,128 @@
-
-    <div class="container">
-        <h1>REGISTRATION FORM</h1>
-        <p><small>Please fill out this form with the required information</small></p>
-        <form [formGroup]="registrationForm" class="form-container">
-            <div>
-                <input type="text" formControlName="name" placeholder="Enter Name">
-            </div>
-            <!-- <div>
+<div class="container">
+    <h1>REGISTRATION FORM</h1>
+    <p><small>Please fill out this form with the required information</small></p>
+    <form [formGroup]="registrationForm" (ngSubmit)="onRegister()" class="form-container">
+        <div>
+            <input type="text" formControlName="name" placeholder="Enter Name">
+        </div>
+        <!-- <div>
                 <input type="email" formControlName="email" placeholder="Enter Email">
             </div> -->
-            <div>
-                <select formControlName="designation_type">
-                    <option value="student">Student</option>
-                    <option value="staff">Staff</option>
-                    <option value="others">Others</option>
-                </select>
-            </div>
-            <div>
-                <input type="text" formControlName="sid_mno" placeholder="Enter Staff ID or Matric Number">
-            </div>
-            <div>
-                <select formControlName="department_type">
-                    <option value="Accountancy department">Accountancy department</option>
-                    <option value="Agricultural & Bio-Environmental Engineering Department">Agricultural &
-                        Bio-Environmental
-                        Engineering
-                        Department</option>
-                    <option value="Agricultural Technology Department">Agricultural Technology Department</option>
-                    <option value="Architecture Department">Architecture Department</option>
-                    <option value="Art Education Department">Art Education Department</option>
-                    <option value="Banking and Finance Department">Banking and Finance Department</option>
-                    <option value="Biological Science Department">Biological Science Department</option>
-                    <option value="Building Technology Department">Building Technology Department</option>
-                    <option value="Business Administration Department">Business Administration Department</option>
-                    <option value="Chemical Engineering Department">Chemical Engineering Department</option>
-                    <option value="Chemical Science Department">Chemical Science Department</option>
-                    <option value="Civil Engineering Department">Civil Engineering Department</option>
-                    <option value="Computer Engineering Department">Computer Engineering Department</option>
-                    <option value="Computer Technology Department">Computer Technology Department</option>
-                    <option value="Educational Foundations Department">Educational Foundations Department</option>
-                    <option value="Electrical Electronics Engineering Department">Electrical Electronics Engineering
-                        Department
-                    </option>
-                    <option value="Estate Management Department">Estate Management Department</option>
-                    <option value="Fashion Design Department">Fashion Design Department</option>
-                    <option value="Food Technology Department">Food Technology Department</option>
-                    <option value="Graphics Design Department">Graphics Design Department</option>
-                    <option value="Hospitality Management Technology Department">Hospitality Management Technology
-                        Department
-                    </option>
-                    <option value="Industrial Design Department">Industrial Design Department</option>
-                    <option value="Industrial Maintenance Engineering Department">Industrial Maintenance Engineering
-                        Department
-                    </option>
-                    <option value="Languages Department">Languages Department</option>
-                    <option value="Leisure and Tourism Department">Leisure and Tourism Department</option>
-                    <option value="Marine Engineering Department">Marine Engineering Department</option>
-                    <option value="Marketing Department">Marketing Department</option>
-                    <option value="Mass Communication Department">Mass Communication Department</option>
-                    <option value="Mathematics Department">Mathematics Department</option>
-                    <option value="Mechanical Engineering Department">Mechanical Engineering Department</option>
-                    <option value="Mechatronics Engineering Department">Mechatronics Engineering Department</option>
-                    <option value="Metallurgical Engineering Department">Metallurgical Engineering Department</option>
-                    <option value="Mineral & Petroleum Resources Engineering Department">Mineral & Petroleum Resources
-                        Engineering
-                        Department</option>
-                    <option value="Nutrition and Dietetics Department">Nutrition and Dietetics Department</option>
-                    <option value="Office Technology Management Department">Office Technology Management Department
-                    </option>
-                    <option value="Physical Science Department">Physical Science Department</option>
-                    <option value="Polymer and Textile Department">Polymer and Textile Department</option>
-                    <option value="Printing Technology Department">Printing Technology Department</option>
-                    <option value="Public Administration Department">Public Administration Department</option>
-                    <option value="Quantity Surveying Department">Quantity Surveying Department</option>
-                    <option value="Science Labouratory Technology Department">Science Labouratory Technology Department
-                    </option>
-                    <option value="Social Science Department">Social Science Department</option>
-                    <option value="Statistics Department">Statistics Department</option>
-                    <option value="Surveying & Geoinformatics Department">Surveying & Geoinformatics Department</option>
-                    <option value="Technical Education Department">Technical Education Department</option>
-                    <option value="Urban & Regional Planning Department">Urban & Regional Planning Department</option>
-                    <option value="Vocational Education Department">Vocational Education Department</option>
-                    <option value="Welding & Fabrication Engineering Department">Welding & Fabrication Engineering
-                        Department
-                    </option>
-                    <option value="Others">Others</option>
-                </select>
-            </div>
-            <div>
-                <input type="text" formControlName="address" placeholder="Enter Home Address">
-            </div>
-            <div>
-                <input type="tel" formControlName="phone" placeholder="Enter Phone Number">
-            </div>
-            <div>
-                <p><small>DATE OF FIRST ATTENDANCE</small></p>
-                <input type="date" formControlName="dofa" placeholder="Enter Date of First Attendance">
-            </div>
-            <div>
-                <p><small>DATE OF BIRTH</small></p>
-                <input type="date" formControlName="dob" placeholder="Enter Date of Birth">
-            </div>
-            <div>
-                <p><small>GENDER</small></p>
-                <select formControlName="gender_type">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="others">Others</option>
-                </select>
-            </div>
-            <!-- <div>
+        <div>
+            <select formControlName="designation">
+                <option value="student">Student</option>
+                <option value="staff">Staff</option>
+                <option value="patient">Patient</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        <div>
+            <input type="text" formControlName="sid_mno" placeholder="Enter Staff ID or Matric Number">
+        </div>
+        <div>
+            <select formControlName="department_type">
+                <option value="Accountancy department">Accountancy department</option>
+                <option value="Agricultural & Bio-Environmental Engineering Department">Agricultural &
+                    Bio-Environmental
+                    Engineering
+                    Department</option>
+                <option value="Agricultural Technology Department">Agricultural Technology Department</option>
+                <option value="Architecture Department">Architecture Department</option>
+                <option value="Art Education Department">Art Education Department</option>
+                <option value="Banking and Finance Department">Banking and Finance Department</option>
+                <option value="Biological Science Department">Biological Science Department</option>
+                <option value="Building Technology Department">Building Technology Department</option>
+                <option value="Business Administration Department">Business Administration Department</option>
+                <option value="Chemical Engineering Department">Chemical Engineering Department</option>
+                <option value="Chemical Science Department">Chemical Science Department</option>
+                <option value="Civil Engineering Department">Civil Engineering Department</option>
+                <option value="Computer Engineering Department">Computer Engineering Department</option>
+                <option value="Computer Technology Department">Computer Technology Department</option>
+                <option value="Educational Foundations Department">Educational Foundations Department</option>
+                <option value="Electrical Electronics Engineering Department">Electrical Electronics Engineering
+                    Department
+                </option>
+                <option value="Estate Management Department">Estate Management Department</option>
+                <option value="Fashion Design Department">Fashion Design Department</option>
+                <option value="Food Technology Department">Food Technology Department</option>
+                <option value="Graphics Design Department">Graphics Design Department</option>
+                <option value="Hospitality Management Technology Department">Hospitality Management Technology
+                    Department
+                </option>
+                <option value="Industrial Design Department">Industrial Design Department</option>
+                <option value="Industrial Maintenance Engineering Department">Industrial Maintenance Engineering
+                    Department
+                </option>
+                <option value="Languages Department">Languages Department</option>
+                <option value="Leisure and Tourism Department">Leisure and Tourism Department</option>
+                <option value="Marine Engineering Department">Marine Engineering Department</option>
+                <option value="Marketing Department">Marketing Department</option>
+                <option value="Mass Communication Department">Mass Communication Department</option>
+                <option value="Mathematics Department">Mathematics Department</option>
+                <option value="Mechanical Engineering Department">Mechanical Engineering Department</option>
+                <option value="Mechatronics Engineering Department">Mechatronics Engineering Department</option>
+                <option value="Metallurgical Engineering Department">Metallurgical Engineering Department</option>
+                <option value="Mineral & Petroleum Resources Engineering Department">Mineral & Petroleum Resources
+                    Engineering
+                    Department</option>
+                <option value="Nutrition and Dietetics Department">Nutrition and Dietetics Department</option>
+                <option value="Office Technology Management Department">Office Technology Management Department
+                </option>
+                <option value="Physical Science Department">Physical Science Department</option>
+                <option value="Polymer and Textile Department">Polymer and Textile Department</option>
+                <option value="Printing Technology Department">Printing Technology Department</option>
+                <option value="Public Administration Department">Public Administration Department</option>
+                <option value="Quantity Surveying Department">Quantity Surveying Department</option>
+                <option value="Science Labouratory Technology Department">Science Labouratory Technology Department
+                </option>
+                <option value="Social Science Department">Social Science Department</option>
+                <option value="Statistics Department">Statistics Department</option>
+                <option value="Surveying & Geoinformatics Department">Surveying & Geoinformatics Department</option>
+                <option value="Technical Education Department">Technical Education Department</option>
+                <option value="Urban & Regional Planning Department">Urban & Regional Planning Department</option>
+                <option value="Vocational Education Department">Vocational Education Department</option>
+                <option value="Welding & Fabrication Engineering Department">Welding & Fabrication Engineering
+                    Department
+                </option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+        <div>
+            <input type="text" formControlName="address" placeholder="Enter Home Address">
+        </div>
+        <div>
+            <input type="tel" formControlName="phone" placeholder="Enter Phone Number">
+        </div>
+        <div>
+            <p><small>DATE OF FIRST ATTENDANCE</small></p>
+            <input type="date" formControlName="dofa" placeholder="Enter Date of First Attendance">
+        </div>
+        <div>
+            <p><small>DATE OF BIRTH</small></p>
+            <input type="date" formControlName="dob" placeholder="Enter Date of Birth">
+        </div>
+        <div>
+            <p><small>GENDER</small></p>
+            <select formControlName="gender_type">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+        <!-- <div>
                 <input type="password" formControlName="password" placeholder="Password">
             </div>
             <div>
                 <input type="password" formControlName="cpassword" placeholder="Confirm Password">
             </div> -->
-            <div>
+        <!-- <div>
                 <p><small>USER</small></p>
                 <select formControlName="user_type">
                     <option value="patient">Patient</option>
                     <option value="staff">Staff</option>
                     <option value="student">Student</option>
                 </select>
-            </div>
-            <button class="btn-ordinary" type="submit">Submit</button>
-        </form>
-    </div>
+            </div> -->
+        <button class="btn-ordinary" type="submit">Submit</button>
+    </form>
+</div>

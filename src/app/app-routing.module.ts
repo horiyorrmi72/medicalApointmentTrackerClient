@@ -9,6 +9,7 @@ import { VitalsComponent } from './vitals/vitals.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { BookingComponent } from './booking/booking.component';
 
 const routes: Routes = [
   {path:'', component: LandingpageComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'register', component:RegistrationComponent  },
   {path:'prescription', component:PrescriptionComponent  },
   {path:'vitals', component:VitalsComponent  },
-  {path:'contact', component:ContactComponent  }
+  {path:'contact', component:ContactComponent  },
+  {path:'booking', component:BookingComponent  }
   
 ];
 

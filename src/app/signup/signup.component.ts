@@ -19,29 +19,29 @@ export class SignupComponent implements OnInit {
 
   initForm() {
     this.signupdata = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
       username: ['', [Validators.required, Validators.minLength(4)]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(8)]],
-      email: ['', [Validators.required, Validators.email]]
     });
   }
 
   onSignUp() {
     if (this.signupdata.valid) {
+      const email = this.signupdata.value.email;
       const username = this.signupdata.value.username;
       const password = this.signupdata.value.password;
       const confirmPassword = this.signupdata.value.confirmPassword;
-      const email = this.signupdata.value.email;
 
       if (confirmPassword !== password) {
         alert("Passwords do not match");
         return;
       }
 
-      this.authservice.signup(email, password, username, confirmPassword).subscribe(
+      this.authservice.signup(username, email, password, confirmPassword).subscribe(
         (data) => {
           console.log('Signup successful:', data);
-          this.router.navigate(['/register']);
+          this.router.navigate(['/login']);
         },
         (error) => {
           console.error('Signup failed:', error);
