@@ -26,7 +26,14 @@ export class LoginComponent {
 
       this.authService.login(email, password).subscribe(
         (data) => {
-              this.router.navigate(['/register']);
+
+          //retrieve token
+          const token = data.token;
+
+          //set the token
+          this.authService.setToken(token);
+
+          this.router.navigate(['/register']);
           // this.authService.designedStatus().subscribe((status) => {
           //   if (status === 'Staff') {
           //     this.router.navigate(['/register']);
